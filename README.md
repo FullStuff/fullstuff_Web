@@ -1,2 +1,2 @@
-# fullstuff.gg
-fullstuff.gg Website
+# fullstuff
+fullstuff Website
