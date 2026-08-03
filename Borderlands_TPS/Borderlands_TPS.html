@@ -23,6 +23,49 @@
         </aside>
         <article>
             <h1>Mon parcours et mes notes pour pouvoir modder Borderlands The Pre-Sequel</h1>
+            <details>
+                <summary>1) Installer le python SDK</summary>
+                <p>Il suffit de suivre les étapes d'ici : <a href="https://bl-sdk.github.io/willow2-mod-db/">https://bl-sdk.github.io/willow2-mod-db/</a></p>
+                <p>
+                    <h2>Guide vidéo</h2>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/cCkNCjx3xDM?si=rYygMVdAnj-SCZPz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h2>Guide écrit</h2>
+                    <h3>a) Installer la dernière version de <a href="https://aka.ms/vs/17/release/vc_redist.x86.exe">Microsoft Visual C++ Redistributable</a></h3>
+                    <img src="vcredist.png" alt="VC Redist Installer"><br>
+                    Si vous êtes sous Proton, vous pouvez installer <em>vcrun2022</em> en utilisant <a href="https://github.com/Matoking/protontricks">protontricks</a>
+                    <h3>b) Télécharger la dernière version sur Github</h3>
+                    <img src="download.png" alt="Github download page"><br>
+                    Il ne faut pas télécharger les deux liens code source !
+                    <h3>c) Localiser les fichiers du jeu</h3>
+                    Steam par défaut: <pre><code>C:\Program Files (x86)\Steam\steamapps\common\Borderlands</code></pre>
+                    Epic par défaut: <pre><code>C:\Program Files\Epic Games\Borderlands</code></pre>
+                    Dans Steam : Clique droit -> Gérer -> Parcourir les fichiers locaux<br>
+                    <img src="SteamBorderlandsFiles.png" alt="Fichiers du jeu sur Steam">
+                    <h3>d) Ouvrir le fichier zip téléchargé et l'extraire directement dans le dossier du jeu</h3>
+                    <img src="extract-files.png" alt="Extracting the zip into the game folder"><br>
+                    S'il est demandé d'écraser des fichiers existant : acceptez.<br>
+                    [PROTON ONLY] Lorsque l'on joue sur Linux via Proton,il faut rajouter ceci comme argument pour démarrer:
+                    <pre><code>WINEDLLOVERRIDES="ddraw=n,b" %command%</code></pre>
+                    Voir la <a href="https://bl-sdk.github.io/willow2-mod-db/faq/#can-i-use-this-on-steam-decklinuxmac">FaQ</a> pour plus d'infos<br>
+                    L'installation est terminée !
+                </p>
+            </details>
+            <details>
+            <summary>2) Activer la console</summary>
+                <p>
+                    Pour activer la console il faut dédier une touche à l'ouverture de la console. Voilà le fichier à modifier
+                    <pre><code>C:\Users\User\Documents\My Games\Borderlands The Pre-Sequel\WillowGame\Config\WillowInput.ini</code></pre>
+                    Il faut trouver le paramètre à modifier
+                    <pre><code>ConsoleKey=Undefine</code></pre>
+                    Vers
+                    <pre><code>ConsoleKey=F2</code></pre>
+                    <img src="ConsoleKey.PNG" alt="ConsoleKey"><br>
+                    J'ai essayé avec F1 mais le jeu plantait.
+                </p>
+            </details>
+            <details>
+            <summary>3) Création d'un mod vide</summary>
+            </details>
         </article>
     </main>
     <footer>
